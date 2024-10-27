@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+ background-color: rgb(230, 233, 235);
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logo {
+    width: 16rem;
+    height: 4rem;
+    
+    display: flex;
+    
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: black;
+    font-weight: 500;
+font-size: 1.25rem;
+    text-decoration: underline;
+    transition: 1s ease-in-out;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 8px;
+    border: 1.3px solid black;
+    border-radius: 5px;
+}
+.search-container input::placeholder{
+    color: #3498db;
+}
+
+.search-container button {
+    padding: 8px 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #ecf0f1;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+
+
+
+#about {
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out; /* Animation */
+}
+
+h2 {
+    color: #3498db; /* Brand color for headings */
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    transition: transform 0.3s; /* Smooth transform effect */
+}
+
+p:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 468px) {
+    .nav-list {
+        gap: 1px;
+        display: none;
+        overflow: hidden;
+        flex-direction: row;
+        margin-top: 2px;
+        justify-content: center;
+        border-radius: 5px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 98%;
+        margin-left: 1%;
+        background-color: #39a4ec;
+        padding: 15px 0;
+        text-align: center;
+        border: 1px solid black;
+        z-index: 3;
+    }
+    .search-container input {
+        padding: 1px;
+        width: 95px;
+     font-size: 14px;
+     text-align: center;
+        border-radius: 4px;
+    }
+    .logo {
+        margin-right: 5px;
+        height: 35px;
+        width: 120px;
+padding: -9px;
+    }
+    
+
+    .nav-list.active {
+        display: flex;
+        animation: fadeIn 0.3s ease forwards;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
